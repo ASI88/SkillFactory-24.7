@@ -1,9 +1,16 @@
+package model;
+
+import enums.StudyProfile;
+
 public class University {
     private String id;
     private String fullName;
     private String shortName;
     private int yearOfFoundation;
     private StudyProfile mainProfile;
+
+    public University() {
+    }
 
     public String getId() {
         return id;
@@ -44,4 +51,15 @@ public class University {
     public void setMainProfile(StudyProfile mainProfile) {
         this.mainProfile = mainProfile;
     }
+
+    @Override
+    public String toString() {
+        return String.format("id = %s, fullName = %s, shortName = %s, yearOfFoundation = %s, mainProfile = %s",
+                this.id,
+                this.fullName,
+                this.shortName,
+                this.yearOfFoundation,
+                this.mainProfile.getProfileName());
+    }
+
 }

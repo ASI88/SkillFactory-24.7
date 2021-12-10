@@ -1,8 +1,13 @@
+package model;
+
 public class Student {
     private String fullName;
     private String universityId;
     private int currentCourseNumber;
     private float avgExamScore;
+
+    public Student() {
+    }
 
     public String getFullName() {
         return fullName;
@@ -34,5 +39,14 @@ public class Student {
 
     public void setAvgExamScore(float avgExamScore) {
         this.avgExamScore = avgExamScore;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("fullName = %s, universityId = %s, currentCourseNumber = %s, avgExamScore = %s",
+                this.fullName,
+                this.universityId,
+                this.currentCourseNumber,
+                this.avgExamScore);
     }
 }
